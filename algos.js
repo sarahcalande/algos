@@ -14,7 +14,7 @@ function binarySearch(value, arr){
     if (arr[middle] == value){
       found = true;
       position = middle;
-      //the will return the middle if its the value, else keep searching starting
+      //return the middle if its the value, else keep searching starting
       //to the left w lower numbers
     } else if arr[middle] > value){
       //resets middle in while loop to lower position and will recheck entire
@@ -27,3 +27,18 @@ function binarySearch(value, arr){
       }
       return position;
     }
+
+
+
+    //pseudo code:
+    //the diff between linear and binary search is that binary search
+    //is already sorted and starts with the middle
+    //we make a function that has 2 arguements: the array and value we're searching for
+    //we want to declare 5 things: first, last, position as -1, "found" as false, and middle
+    //start a while loop
+    //calculate the middle, round to integer
+    //return the middle if its the value, else keep searching starting
+    //to the left w lower numbers; reset middle in while loop to lower position and will recheck entire
+    //left side
+    //if value not found, search through numbers greater than middle
+    //final step is always returning the position
