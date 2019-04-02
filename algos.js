@@ -14,10 +14,14 @@ function binarySearch(value, arr){
     if (arr[middle] == value){
       found = true;
       position = middle;
-      //the will return the middle if its the value, else keep searching
+      //the will return the middle if its the value, else keep searching starting
+      //to the left w lower numbers
     } else if arr[middle] > value){
+      //resets middle in while loop to lower position and will recheck entire
+      //left side
       last = middle - 1;
     } else {
+      //if value not found, search through numbers greater than middle
       first = middle + 1
         }
       }
