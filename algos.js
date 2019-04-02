@@ -9,11 +9,12 @@ function binarySearch(value, arr){
   let middle;
 //start a while loop
   while (found === false && first <= last){
-    //calculate the middle
+    //calculate the middle, round to integer
     middle = Math.floor((first + last))/2);
     if (arr[middle] == value){
       found = true;
       position = middle;
+      //the will return the middle if its the value, else keep searching
     } else if arr[middle] > value){
       last = middle - 1;
     } else {
