@@ -142,3 +142,46 @@ function hexToRGB (hex) {
 
   return RGB
 }
+
+
+//Iterate over the input array called data
+//Add the element to the output array called result if the element does not exist in the output array
+//Return the output array
+
+
+function deDuplicate(data) {
+
+  var result = [];
+
+  data.forEach(function(element) {
+
+    if (result.indexOf(element) === -1) {
+      result.push(element);
+    }
+  });
+
+  return result;
+}
+
+
+//pascals triangle
+
+function createPascalTriangle (numRows) {
+  var pascalTriangle = [];
+
+  for (var i = 0; i < numRows; i++) {
+    pascalTriangle[i] = new Array(i+1);
+
+    for (var j = 0; j < i+1; j++) {
+      if (j === 0 || j === i) {
+        pascalTriangle[i][j] = 1;
+      } else {
+        pascalTriangle[i][j] = pascalTriangle[i-1][j-1] + pascalTriangle[i-1][j];
+      }
+    }
+  }
+
+  return pascalTriangle;
+}
+
+console.table(createPascalTriangle(6));
