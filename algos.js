@@ -42,3 +42,23 @@ function binarySearch(value, arr){
     //left side
     //if value not found, search through numbers greater than middle
     //final step is always returning the position
+
+
+
+
+
+
+// Remove duplicates from the given array
+function removeDuplicates(arr) {
+    var placeholder = {};
+    arr.forEach(function(i) {
+        if(!placeholder[i]) {
+            placeholder[i] = true;
+        }
+    });
+    return Object.keys(arr);
+}
+
+var arr = ['Heart5', 'Diamond6', 'Club7', 'Spade8', 'Diamond6', 'Club7'];
+
+console.log(removeDuplicates(arr)); // ['Heart5', 'Diamond6', 'Club7', 'Spade8']
