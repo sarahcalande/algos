@@ -185,3 +185,18 @@ function createPascalTriangle (numRows) {
 }
 
 console.table(createPascalTriangle(6));
+
+
+
+//delete all nodes in a binary tree
+//can't delete parent, have to delete children first
+
+function deleteTree(node) {
+    if (node == NULL) return;
+
+    // Delete left, right subtrees
+    deleteTree(node.left);
+    deleteTree(node.right);
+
+    deleteNode(node);
+}
