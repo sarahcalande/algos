@@ -62,3 +62,37 @@ function removeDuplicates(arr) {
 var arr = ['Heart5', 'Diamond6', 'Club7', 'Spade8', 'Diamond6', 'Club7'];
 
 console.log(removeDuplicates(arr)); // ['Heart5', 'Diamond6', 'Club7', 'Spade8']
+
+
+//Sort the given stack into an ascending order without using recursion.
+//'use strict';
+//Time complexity : O(n^2) (quadratic, around level 5)
+
+function Stack() {
+  this.top = null;
+}
+
+Stack.prototype.sort = function() {
+  var s2 = new Stack();
+
+  while (this.top) {
+    var tmp = this.pop();
+
+    while (s2.top && s2.top.data > tmp) {
+      s1.push(s2.pop());
+    }
+    s2.push(tmp);
+  }
+
+  console.log('Sorted stack = ', s2);
+}
+
+var s1 = new Stack();
+s1.push(3);
+s1.push(6);
+s1.push(1);
+s1.push(2);
+s1.push(5);
+s1.push(4);
+
+s1.sort();
